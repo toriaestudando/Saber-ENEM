@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2864a8">
+  <meta name="description" content="Saber ENEM — plataforma gratuita de estudos, conteúdos, questões comentadas e redação para o ENEM.">
+  <title>Saber ENEM — sua jornada de estudos</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Saber ENEM, página inicial"><span class="brand-mark">S</span><span><strong>Saber ENEM</strong><small>aprenda no seu ritmo</small></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">☰</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="#inicio" class="nav-link active">Início</a><a href="#conteudos" class="nav-link">Conteúdos</a><a href="#questoes" class="nav-link">Questões</a><a href="#redacao" class="nav-link">Redação</a>
+    </nav>
+    <a class="header-cta" href="#questoes">Começar a praticar <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="main">
+    <section id="inicio" class="hero section-wrap">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> SUA PREPARAÇÃO COMEÇA AQUI</span>
+        <h1>Seu próximo passo começa com <span>conhecimento.</span></h1>
+        <p class="hero-description">Um espaço gratuito, acolhedor e organizado para revisar conteúdos, praticar questões e desenvolver sua redação para o ENEM.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#conteudos">Explorar conteúdos <span>→</span></a><a class="button button-secondary" href="#questoes">Resolver questões</a></div>
+        <div class="hero-note"><span class="note-icon">✦</span><span><strong>Estude sem pressão.</strong> Um assunto de cada vez, no seu ritmo.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração decorativa de materiais de estudo">
+        <div class="sun-shape"></div><div class="floating-star star-one">✦</div><div class="floating-star star-two">✧</div>
+        <div class="study-card card-back"><span class="mini-label">PLANO DE ESTUDO</span><div class="fake-line wide"></div><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-check">✓</div></div>
+        <div class="study-card card-front"><div class="book-icon">▤</div><span class="mini-label">SEU ESPAÇO DE APRENDIZAGEM</span><h3>Pequenos passos,<br>grandes conquistas.</h3><div class="progress-label"><span>Vamos começar?</span><span>✦</span></div><div class="progress-track"><span></span></div></div>
+        <div class="bubble bubble-blue">✎ Redação</div><div class="bubble bubble-yellow">✓ Questões</div>
+      </div>
+    </section>
+
+    <section class="quick-stats section-wrap" aria-label="Recursos da plataforma">
+      <div class="stat-item"><span class="stat-icon blue">▤</span><div><strong>4 áreas</strong><small>do conhecimento</small></div></div>
+      <div class="stat-item"><span class="stat-icon yellow">✎</span><div><strong>Redação</strong><small>da estrutura à revisão</small></div></div>
+      <div class="stat-item"><span class="stat-icon lilac">✓</span><div><strong>Questões</strong><small>com correção comentada</small></div></div>
+      <div class="stat-item"><span class="stat-icon mint">♡</span><div><strong>100% gratuito</strong><small>sem cadastro ou login</small></div></div>
+    </section>
+
+    <section id="conteudos" class="content-section section-wrap">
+      <div class="section-heading"><div><span class="eyebrow">BIBLIOTECA DE ESTUDOS</span><h2>O que você quer estudar hoje?</h2><p>Encontre uma área, escolha um assunto e comece sua revisão.</p></div><span class="heading-decoration">✦</span></div>
+      <div class="area-grid" id="area-grid">
+        <button class="area-card area-languages" data-area="Linguagens, Códigos e suas Tecnologias"><span class="area-icon">文</span><span class="area-card-content"><strong>Linguagens</strong><small>Português, literatura, artes e idiomas</small><span class="area-bottom">Explorar área <b>↗</b></span></span></button>
+        <button class="area-card area-humanities" data-area="Ciências Humanas e suas Tecnologias"><span class="area-icon">◉</span><span class="area-card-content"><strong>Ciências Humanas</strong><small>História, geografia, filosofia e sociologia</small><span class="area-bottom">Explorar área <b>↗</b></span></span></button>
+        <button class="area-card area-nature" data-area="Ciências da Natureza e suas Tecnologias"><span class="area-icon">⌬</span><span class="area-card-content"><strong>Ciências da Natureza</strong><small>Biologia, química e física</small><span class="area-bottom">Explorar área <b>↗</b></span></span></button>
+        <button class="area-card area-math" data-area="Matemática e suas Tecnologias"><span class="area-icon">∑</span><span class="area-card-content"><strong>Matemática</strong><small>Problemas, funções, geometria e dados</small><span class="area-bottom">Explorar área <b>↗</b></span></span></button>
+      </div>
+
+      <div class="library-panel">
+        <div class="library-heading"><div><h3>Biblioteca de conteúdos</h3><p id="content-count">Materiais organizados por área e assunto.</p></div><button id="clear-filters" class="text-button">Limpar filtros ↺</button></div>
+        <div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar matéria ou assunto..." aria-label="Buscar matéria ou assunto"></label><label class="select-label"><span>Área</span><select id="area-filter"><option value="">Todas as áreas</option><option>Linguagens, Códigos e suas Tecnologias</option><option>Ciências Humanas e suas Tecnologias</option><option>Ciências da Natureza e suas Tecnologias</option><option>Matemática e suas Tecnologias</option></select></label><label class="select-label"><span>Matéria</span><select id="subject-filter"><option value="">Todas as matérias</option></select></label></div>
+        <div id="materials-grid" class="materials-grid" aria-live="polite"></div>
+        <div id="empty-materials" class="empty-state" hidden><span>⌕</span><strong>Nenhum conteúdo encontrado</strong><p>Tente outro termo ou remova algum filtro.</p></div>
+      </div>
+    </section>
+
+    <section id="questoes" class="practice-section">
+      <div class="section-wrap practice-layout">
+        <div class="practice-intro"><span class="eyebrow">PRATIQUE E APRENDA</span><h2>Conhecimento se fortalece com a prática.</h2><p>Responda, confira a explicação e entenda o raciocínio por trás de cada alternativa. As questões desta versão são autorais e inspiradas em habilidades trabalhadas no ENEM.</p><div class="session-stats"><div><strong id="answered-count">0</strong><span>Respondidas</span></div><div><strong id="correct-count">0</strong><span>Acertos</span></div><div><strong id="accuracy-count">—</strong><span>Aproveitamento</span></div></div><button id="reset-session" class="text-button">Reiniciar indicadores da sessão ↺</button></div>
+        <div class="quiz-card">
+          <div class="quiz-topline"><span class="quiz-tag">QUESTÕES AUTORAIS</span><span id="question-position">Questão 1</span></div>
+          <div class="quiz-filters"><label><span>Área</span><select id="quiz-area"><option value="">Todas as áreas</option><option>Linguagens, Códigos e suas Tecnologias</option><option>Ciências Humanas e suas Tecnologias</option><option>Ciências da Natureza e suas Tecnologias</option><option>Matemática e suas Tecnologias</option></select></label><label><span>Matéria</span><select id="quiz-subject"><option value="">Todas as matérias</option></select></label></div>
+          <div id="quiz-content"></div>
+          <div class="quiz-footer"><span id="quiz-feedback-hint">Escolha uma alternativa para continuar.</span><button id="next-question" class="button button-primary" disabled>Próxima questão →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="redacao" class="essay-section section-wrap">
+      <div class="section-heading"><div><span class="eyebrow">OFICINA DE REDAÇÃO</span><h2>Transforme ideias em argumentos.</h2><p>Entenda a estrutura do texto dissertativo-argumentativo e pratique com mais segurança.</p></div><span class="heading-decoration">✎</span></div>
+      <div class="essay-grid">
+        <article class="essay-feature"><div class="essay-feature-top"><span class="essay-icon">✎</span><span class="pill">GUIA DE ESTUDO</span></div><h3>Como organizar sua redação</h3><p>Um bom texto apresenta uma tese clara, desenvolve argumentos e propõe uma intervenção relacionada ao problema discutido.</p><div class="essay-steps"><div><span>01</span><section><strong>Introdução</strong><p>Contextualize o tema e apresente seu ponto de vista (tese).</p></section></div><div><span>02</span><section><strong>Desenvolvimento</strong><p>Construa argumentos com explicações, exemplos e repertório pertinente.</p></section></div><div><span>03</span><section><strong>Conclusão</strong><p>Retome a discussão e apresente uma proposta de intervenção detalhada.</p></section></div></div></article>
+        <div class="essay-side">
+          <article class="essay-mini"><span class="mini-card-icon yellow">◎</span><div><h3>As cinco competências</h3><p>Domínio da escrita formal, compreensão do tema, argumentação, coesão e proposta de intervenção.</p><button class="inline-link" data-essay="competencias">Ver as competências <span>→</span></button></div></article>
+          <article class="essay-mini"><span class="mini-card-icon blue">⌁</span><div><h3>Conectivos úteis</h3><p>Organize relações de causa, contraste, conclusão e adição entre suas ideias.</p><button class="inline-link" data-essay="conectivos">Explorar conectivos <span>→</span></button></div></article>
+          <article class="essay-mini"><span class="mini-card-icon mint">✓</span><div><h3>Checklist de revisão</h3><p>Revise estrutura, tese, argumentos, coesão e os elementos da intervenção.</p><button class="inline-link" data-essay="checklist">Abrir checklist <span>→</span></button></div></article>
+        </div>
+      </div>
+      <div id="essay-detail" class="essay-detail" hidden aria-live="polite"></div>
+      <div class="topic-practice"><div><span class="eyebrow">HORA DE PRATICAR</span><h3>Temas para desenvolver sua escrita</h3><p>Use os temas como ponto de partida. Eles são propostas de treino, não temas oficiais nem previsões de prova.</p></div><div class="topic-chips"><button data-topic="Desafios para combater a desinformação entre jovens no Brasil">Desinformação entre jovens</button><button data-topic="Caminhos para ampliar o acesso à leitura no Brasil">Acesso à leitura</button><button data-topic="Desafios da inclusão digital na educação brasileira">Inclusão digital na educação</button></div><div id="topic-prompt" class="topic-prompt" hidden></div></div>
+    </section>
+
+    <section class="about-section"><div class="section-wrap about-layout"><div class="about-mark">S<span>✦</span></div><div class="about-copy"><span class="eyebrow">SOBRE O PROJETO</span><h2>Feito para apoiar sua jornada.</h2><p>O Saber ENEM é um projeto educacional desenvolvido para tornar a revisão e a prática de conteúdos mais acessíveis, com uma navegação simples e materiais organizados.</p><p><strong>Criadora:</strong> Vitória Letícia Sombra Aires<br><strong>Formação:</strong> estudante do 3º ano do Ensino Médio Técnico em Informática<br><strong>Instituição:</strong> Escola Estadual Professor Abel Freire Coelho</p></div><div class="about-note"><span>“</span><p>Aprender não é saber tudo de uma vez. É continuar avançando, um passo por vez.</p><div class="note-line"></div><small>SABER ENEM</small></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">S</span><span><strong>Saber ENEM</strong><small>Conhecimento ao seu alcance.</small></span></a><p>Projeto educacional independente para apoio aos estudos do ENEM.</p><a href="#inicio" class="back-top">Voltar ao início ↑</a></div><div class="section-wrap footer-bottom"><span>© <span id="current-year"></span> Saber ENEM</span><span>Feito com dedicação à educação.</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
